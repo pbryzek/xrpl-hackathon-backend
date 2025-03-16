@@ -1,0 +1,17 @@
+name: xrpl-green-bonds
+services:
+  - name: xrpl-green-bonds-service
+    image:
+      registry: registry.digitalocean.com
+      repository: xrpl-green-bonds-registry/xrpl-green-bonds
+      tag: latest
+    envs:
+      - key: ENVIRONMENT
+        value: production
+      - key: PORT
+        value: "8080"
+    http_port: 8080
+    instance_size_slug: basic-xs # Change to a larger size if needed
+    instance_count: 1
+    routes:
+      - path: /

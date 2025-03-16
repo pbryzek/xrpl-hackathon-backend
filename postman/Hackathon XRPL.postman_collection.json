@@ -1,0 +1,429 @@
+{
+	"info": {
+		"_postman_id": "2a6c4a3c-8849-4a45-878e-cd1e25d91b75",
+		"name": "Hackathon XRPL",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "553666",
+		"_collection_link": "https://carbonsustain.postman.co/workspace/CarbonSustain~aa377f54-a0cf-4760-b4d2-8db19baa5078/collection/553666-2a6c4a3c-8849-4a45-878e-cd1e25d91b75?action=share&source=collection_link&creator=553666"
+	},
+	"item": [
+		{
+			"name": "ActiveBonds",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5001/bonds/active",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5001",
+					"path": [
+						"bonds",
+						"active"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "closedBonds",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5001/bonds/closed",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5001",
+					"path": [
+						"bonds",
+						"closed"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "openBonds",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5001/bonds/open",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5001",
+					"path": [
+						"bonds",
+						"open"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "pendingBonds",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5001/bonds/pending",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5001",
+					"path": [
+						"bonds",
+						"pending"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "allBonds",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5001/bonds/all",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5001",
+					"path": [
+						"bonds",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Bond",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5001/bonds/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5001",
+					"path": [
+						"bonds",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Stake",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"amount\": 0.1,\n    \"project\": \"Brazil Rancho Da Montanha 03182024\",\n    \"issuanceDate\": \"2023-12-31T01:05:00Z\",\n    \"walletSecret\": \"SECRETSECRETSECRETSECRET\",\n    \"expirationDate\": \"2024-12-31T01:05:00Z\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5001/bonds/1/stake",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5001",
+					"path": [
+						"bonds",
+						"1",
+						"stake"
+					],
+					"query": [
+						{
+							"key": "amount",
+							"value": ".001",
+							"disabled": true
+						},
+						{
+							"key": "project",
+							"value": "Brazil Rancho Da Montanha 03182024",
+							"disabled": true
+						},
+						{
+							"key": "issuanceDate",
+							"value": "2025-01-31T00:00:00Z",
+							"disabled": true
+						},
+						{
+							"key": "userSecret",
+							"value": "SECRETSECRETSECRETSECRET",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Invest",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \n    \"name\": \"BNP Paribas Multinational Bank\",\n    \"amount\": 1000000.00, \n    \"bondId\": 1,\n    \"walletAddress\": \"X7CKi2abDKpCYJRswXKL9dbQmSpR9q8RhCVh6DnLkbB9R8M\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5001/bonds/1/invest",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5001",
+					"path": [
+						"bonds",
+						"1",
+						"invest"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tokenize",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \n    \"bondId\": 1,\n    \"walletAddress\": \"X7CKi2abDKpCYJRswXKL9dbQmSpR9q8RhCVh6DnLkbB9R8M\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5001/bonds/1/tokenize",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5001",
+					"path": [
+						"bonds",
+						"1",
+						"tokenize"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "bond",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \n    \"name\": \"Green Bond #1\",\n    \"amount\": 1000000.00, \n    \"issuer\": \"CarbonSustain.io\",\n    \"interestRate\": 5.5,\n    \"description\": \"This is a fully sustainable and green bond that is packed with PFMUs.\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5001/bonds/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5001",
+					"path": [
+						"bonds",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "xrpl BuyPFMU",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"amount\": 0.01,\n    \"walletSecret\": \"SECRETSECRETSECRETSECRET\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5001/xrpl/buy-pfmu",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5001",
+					"path": [
+						"xrpl",
+						"buy-pfmu"
+					],
+					"query": [
+						{
+							"key": "amount",
+							"value": ".001",
+							"disabled": true
+						},
+						{
+							"key": "userSecret",
+							"value": "userSecretuserSecret",
+							"disabled": true
+						},
+						{
+							"key": "amount",
+							"value": "100",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "xrpl GetUserPfmu",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \n    \"name\": \"Green Bond #1\",\n    \"amount\": 1000000.00, \n    \"issuer\": \"CarbonSustain.io\",\n    \"interestRate\": 2.4,\n    \"description\": \"This is a fully sustainable and green bond that is packed with PFMUs.\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5001/xrpl/get-user-pfmu/rrrrrrrrrrrrrrrrrrrrrhoLvTp",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5001",
+					"path": [
+						"xrpl",
+						"get-user-pfmu",
+						"rrrrrrrrrrrrrrrrrrrrrhoLvTp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "xrpl Stake PFMU",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \n    \"name\": \"Green Bond #1\",\n    \"amount\": 1000000.00, \n    \"issuer\": \"CarbonSustain.io\",\n    \"interestRate\": 2.4,\n    \"description\": \"This is a fully sustainable and green bond that is packed with PFMUs.\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5001/xrpl/stake-pfmu?walletSecret=userSecretuserSecret&amount=100",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5001",
+					"path": [
+						"xrpl",
+						"stake-pfmu"
+					],
+					"query": [
+						{
+							"key": "walletSecret",
+							"value": "userSecretuserSecret"
+						},
+						{
+							"key": "amount",
+							"value": "100"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
